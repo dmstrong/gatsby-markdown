@@ -8,8 +8,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import Helmet from 'react-helmet'
 
 import Header from "./header"
+import Menu from "./menu"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -25,7 +27,14 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Helmet 
+        title={data.site.siteMetadata.title}
+        meta={[
+          { name: 'description', content: 'This is a Gatsby.js website' },
+          { name: 'keywords', content: 'Gatsby Blog, React Blog' }
+        ]} />
       <Header siteTitle={data.site.siteMetadata.title} />
+      <Menu />
       <div
         style={{
           margin: `0 auto`,
