@@ -7,7 +7,7 @@ export default function AboutPage() {
   return (
     <Layout>
       <SEO title="About" />
-      <h1>About Us</h1>
+      <h1 className="page-title">About Me</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos numquam,
         totam molestiae quidem ab vitae sed, qui blanditiis mollitia,

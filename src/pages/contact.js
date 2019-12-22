@@ -3,11 +3,13 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-export default function ServicePage() {
+export default function ContactPage() {
   return (
     <Layout>
-      <SEO title="Services" />
-      <h1>Services</h1>
+      <SEO title="Contact" />
+      <h1 className="page-title">
+        Contact Me
+      </h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos numquam,
         totam molestiae quidem ab vitae sed, qui blanditiis mollitia,

@@ -1,35 +1,46 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Style from "style-it"
+
 
 export default function Header({ siteTitle }) {
   return (
-    <header
-      style={{
-        background: `rebeccapurple`,
-        marginBottom: `0`,
-      }}
-    >
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `1.45rem 1.0875rem`,
-        }}
-      >
-        <h1 style={{ margin: 0 }}>
+    <>
+      <Style>
+        {`
+        header {
+          display: grid;
+          grid-template-columns: 1fr;
+          padding: 30px;
+        } 
+        .item {
+          padding: 10px;
+          color: var(--white);
+          text-align: center;
+
+        }
+        a:hover {
+          color: var(--oslogray);
+        }
+        `}
+      </Style>
+      <header className="dark-shades-background">
+        <div className="item">
           <Link
             to="/"
             style={{
-              color: `white`,
-              textDecoration: `none`,
+              color: "#fff",
+              textDecoration: "none",
+              fontSize: "4rem",
             }}
           >
             {siteTitle}
           </Link>
-        </h1>
-      </div>
-    </header>
+        </div>
+        <div className="item">by Dev Tha Dude</div>
+      </header>
+    </>
   )
 }
 

@@ -7,13 +7,27 @@ export default function Template({ data }) {
 
   return (
     <Layout>
-      <Link to="/blog">Go Back</Link>
-      <hr />
-      <h1>{post.frontmatter.title}</h1>
-      <h4>
-        Posted by {post.frontmatter.author} on {post.frontmatter.date}
-      </h4>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+    <h1
+    style={{
+      marginBottom: 0,
+    }}
+    >
+    {post.frontmatter.title}
+    </h1>
+    <small>
+    Posted by {post.frontmatter.author} on {post.frontmatter.date}
+    </small>
+    <div
+    style={{
+      marginTop: 50,
+    }}
+    dangerouslySetInnerHTML={{ __html: post.html }}
+    />
+    <hr />
+    <Link to="/blog">Go Back</Link>
+    <br />
+    <br />
+    <br />
     </Layout>
   )
 }

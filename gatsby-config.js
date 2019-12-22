@@ -1,13 +1,14 @@
 module.exports = {
+  pathPrefix: "/gatsby-markdown",
   siteMetadata: {
-    title: `Gatsby + Markdown`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `100 Days of Code`,
+    description: `Another 100 Days of Code project displaying my skills and knowledge.`,
+    author: `@_DevThaDude_`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    'gatsby-plugin-catch-links',
-    'gatsby-transformer-remark',
+    "gatsby-plugin-catch-links",
+    "gatsby-transformer-remark",
     {
       resolve: `gatsby-source-filesystem`,
       options: {

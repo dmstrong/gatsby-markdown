@@ -4,28 +4,51 @@ import Link from 'gatsby-link'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+const titleStyle = {
+  marginBottom: 0
+}
+const excerptStyle = {
+  margin: "20px 0px 5px",
+}
+const buttonStyle = {
+  padding: 7,
+  borderRadius: 5,
+  border: 0,
+  fontSize: ".9em",
+  marginTop: 15,
+  cursor: "pointer",
+  color: "white"
+}
+
 function BlogPage({data}) {
   return (
     <Layout>
       <SEO title="Blog" />
-      <h1>100 Days of Code</h1>
-      {data.allMarkdownRemark.edges.map(post => {
-          return (
-            <div key={post.node.id}>
-              <h3>{post.node.frontmatter.title}</h3>
-              <small>
-                Posted by {post.node.frontmatter.author} on{" "}
-                {post.node.frontmatter.date}
-              </small>
-              <br />
-              <br />
-              <Link to={post.node.frontmatter.path}>Read More...</Link>
-              <br />
-              <br />
-              <hr />
-            </div>
-          )
-      })}
+      <h1 className="page-title">Latest Post</h1>
+      <div className="latest-post">
+        {data.allMarkdownRemark.edges.map(post => {
+            return (
+              <div className="latest-post-item" key={post.node.id}>
+                <h4 style={titleStyle}>{post.node.frontmatter.title}</h4>
+                <small>
+                  Posted by {post.node.frontmatter.author} -{" "}
+                  {post.node.frontmatter.date}
+                </small>
+
+                <p style={excerptStyle}>{post.node.excerpt}</p>
+                <Link to={post.node.frontmatter.path}>
+                  <button class="primary" style={buttonStyle}>
+                    Read More
+                  </button>
+                </Link>
+
+                <br />
+                <br />
+                <hr />
+              </div>
+            )
+        })}
+      </div>
     </Layout>
   )
 }
@@ -42,6 +65,7 @@ export const pageQuery = graphql`
                    title
                  }
                  id
+                 excerpt
                }
              }
            }

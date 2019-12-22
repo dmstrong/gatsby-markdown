@@ -1,33 +1,58 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Style from "style-it"
 
-const menuStyle = {
-    background: '#f4f4f4',
-    paddingTop: '10px'
-}
-const listStyle = {
-  listStyle: 'none',
-  display: "flex",
-  justifyContent: 'space-evenly'
-}
 
 export default function Menu() {
     return (
-      <div style={menuStyle}>
-        <ul style={listStyle}>
+      <>
+      <Style>
+        {`
+        nav ul {
+          display: flex;
+          justify-content: space-evenly;
+          margin: 0 auto;
+          max-width: 960px;
+          list-style: none;
+          width: 100%;
+          padding: 20px;
+        }
+        
+          nav ul li a {
+            color: var(--donkeybrown);
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-variant: all-small-caps;
+          }
+          nav ul li a:hover {
+            color: var(--oslogray);
+          }
+       `}
+      </Style>
+      <nav class="light-shades-background">
+        <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/about">
+              About
+            </Link>
           </li>
           <li>
-            <Link to="/services">Services</Link>
+          <Link to="/blog">
+          Blog
+          </Link>
           </li>
           <li>
-            <Link to="/blog">Blog</Link>
+            <Link to="/contact">
+              Contact
+            </Link>
           </li>
         </ul>
-      </div>
+      </nav>
+      </>
     )
 }
