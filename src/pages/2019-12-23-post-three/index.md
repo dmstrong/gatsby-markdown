@@ -5,5 +5,4 @@ title: "Day 3 - Ok I'm liking CSS again"
 author: "D. Strong"
 ---
 
-
 This is my third blog post in Gatsby.js
