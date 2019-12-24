@@ -4,15 +4,15 @@
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
 
- /* Customized by D.Strong */
- 
- :root {
+/* Customized by D.Strong */
+
+:root {
   --gallery: #efeeee;
   --donkeybrown: #a3906f;
   --oslogray: #848689;
   --spicypink: #80686e;
   --shark: #212227;
-  --white: #FFF;
+  --white: #fff;
 
   --primary: #848689;
   --info: #212227;
@@ -52,244 +52,145 @@
 .dark-shades-background {
   background: var(--shark);
 }
+.white-background {
+  background: var(--white);
+}
 
 /* FUNCTIONAL COLORS - Custom UI Semantics */
- .primary {
-   background: var(--primary);
- }
- .info {
-   background: var(--info);
- }
- .success {
-   background: var(--success);
- }
- .warning {
-   background: var(--warning);
- }
- .danger {
-   background: var(--danger);
- }
-
-/* Transparency */
- .transparent-text {
-   color: transparent !important;
- }
-
-.transparent-background {
-  background-color: transparent !important;
+.primary {
+  background: var(--primary);
+}
+.info {
+  background: var(--info);
+}
+.success {
+  background: var(--success);
+}
+.warning {
+  background: var(--warning);
+}
+.danger {
+  background: var(--danger);
 }
 
-html {
-  box-sizing: border-box;
-  overflow-y: scroll;
-  font: 112.5%/1.45em georgia, serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -webkit-box-sizing: border-box;
-}
-*, *:before, *:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
+/* GENERAL STYLES */
 body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: 1.25;
-}
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block;
-}
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-}
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-progress {
-  vertical-align: baseline;
-}
-[hidden],
-template {
-  display: none;
+  /* background: repeat url(../images/bg-site.png) var(--oslogray);
+  background-blend-mode: overlay; */
+  background-color: var(--gallery);
 }
 a {
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
-  text-decoration: none;
-}
-a:active,
-a:hover {
-  outline-width: 0;
-}
-abbr[title] {
-  border-bottom: none;
-  text-decoration: underline;
-  text-decoration: underline dotted;
-}
-b,
-strong {
-  font-weight: inherit;
-  font-weight: bolder;
-}
-dfn {
-  font-style: italic;
-}
-h1 {
-  font-size: 2rem;
-  margin: 0;
-}
-mark {
-  background-color: #ff0;
-  color: #000;
-}
-small {
-  font-size: 80%;
-}
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sub {
-  bottom: -0.25em;
-}
-sup {
-  top: -0.5em;
-}
-img {
-  border-style: none;
-}
-svg:not(:root) {
-  overflow: hidden;
-}
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-figure {
-  margin: 1em 40px;
-}
-hr {
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 0;
-  overflow: visible;
-}
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.15;
-  margin: 0;
-}
-optgroup {
-  font-weight: 700;
-}
-button,
-input {
-  overflow: visible;
-}
-button,
-select {
-  text-transform: none;
-}
-[type="reset"],
-[type="submit"],
-button,
-html [type="button"] {
-  -webkit-appearance: button;
-}
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner,
-button::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
-}
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring,
-button:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-fieldset {
-  border: 1px solid silver;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-legend {
-  box-sizing: border-box;
-  color: inherit;
-  display: table;
-  max-width: 100%;
-  padding: 0;
-  white-space: normal;
-}
-progress {
-  display: inline-block;
-  vertical-align: baseline;
-}
-textarea {
-  overflow: auto;
-}
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-[type="search"] {
-  -webkit-appearance: textfield;
-  outline-offset: -2px;
-}
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.54;
-}
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
-}
-
-.page-title {
   color: var(--donkeybrown);
+  text-decoration: underline;
+}
+.page-title {
+  color: var(--donkeybrown)
 }
 
+
+/* HEADER STYLES */
+.header-container {
+  display: grid;
+  grid-template-column: 1fr;
+  grid-row-gap: 0.2rem;
+  justify-items: center;
+  align-items: center;
+  padding: 50px 0;
+  background: var(--shark);
+  background-image: url(../images/bg-100daysofcode_edited.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header-container a {
+   text-decoration: none;
+}
+.title {
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.site-title {
+  font-size: 4rem;
+  color: white;
+}
+.site-subtitle {
+  font-size: 2rem;
+  color: white;
+}
+/* HEADER - MEDIA QUERY */
+@media only screen and (max-width: 480px) {
+  .site-title {
+    font-size: 2.5rem;
+  }
+  .site-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+/* MENU STYLES */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--shark);
+ }
+ nav ul li a {
+ text-decoration: none;
+}
+ nav ul li a:hover {
+ background:rgba(0, 0, 0, 0.2);
+}
+
+/* MAIN STYLES */
+main {
+   min-height: calc(70vh - 50px);
+ }
+
+/* Main Styles + Footer Styles = Sticky Footer */
+
+/* FOOTER STYLES */
+footer {
+  height: 50px; 
+ }
+
+
+/* BLOG STYLES */
 .latest-post {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 30px;
+  grid-row-gap: 20px;
 }
 .latest-post-item {
+  font-size: 1.75rem;
+  margin-bottom: 0;
+  margin-top: 0;
+ }
+ .excerpt {
+   margin: 20px 0px 20px;
+ }
+
+ /* POST STYLES */
+ .post-title {
+  color: var(--donkeybrown);
+  font-size: 2.5em;
+  margin-bottom: 0;
+}
+ .post-body {
+  margin-top: 25px;
+  line-height: 1.75rem;
+  font-size: 1.2rem;
+}
+/* BLOG - MEDIA QUERY */
+@media only screen and (min-width: 1280px) {
+  .latest-post {
+    grid-template-columns: 1fr 1fr 1fr;
+
+  }
+}
+@media only screen and (max-width: 480px) {
+  .latest-post {
+    grid-template-columns: 1fr;
+
+  }
 }

@@ -13,6 +13,7 @@ import Style from "style-it"
 
 import Header from "./header"
 import Menu from "./menu"
+import "../css/materialize.css"
 import "../css/layout.css"
 
 const Layout = ({ children }) => {
@@ -43,31 +44,13 @@ const Layout = ({ children }) => {
       <Menu />
       <Style>
         {`
-          .container {
-            margin: 0 auto;
-            max-width: 960px;
-            width: 90%;
-            padding: 1.5rem 2rem;
-          }
-          body {
-            background: var(--shark);
-            color: var(--gallery);
-              }
-            a {
-              color: var(--oslogray);
-              text-decoration: underline;
-            }
-            a:hover {
-              color: var(--donkeybrown);
-            }
+          
          `}
       </Style>
-      <div class="container">
+      <div class="container flow-text">
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          © {new Date().getFullYear()} Dev Tha Dude, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
     </>

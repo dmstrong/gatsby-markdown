@@ -5,5 +5,5 @@ title: "Day 3 - Ok I'm liking CSS again"
 author: "D. Strong"
 ---
 
-## Day 3
-This is my third blog post in Gatbsy.
+
+This is my third blog post in Gatsby.js

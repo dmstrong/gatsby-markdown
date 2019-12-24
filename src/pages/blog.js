@@ -4,22 +4,6 @@ import Link from 'gatsby-link'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const titleStyle = {
-  marginBottom: 0
-}
-const excerptStyle = {
-  margin: "20px 0px 5px",
-}
-const buttonStyle = {
-  padding: 7,
-  borderRadius: 5,
-  border: 0,
-  fontSize: ".9em",
-  marginTop: 15,
-  cursor: "pointer",
-  color: "white"
-}
-
 function BlogPage({data}) {
   return (
     <Layout>
@@ -28,23 +12,22 @@ function BlogPage({data}) {
       <div className="latest-post">
         {data.allMarkdownRemark.edges.map(post => {
             return (
-              <div className="latest-post-item" key={post.node.id}>
-                <h4 style={titleStyle}>{post.node.frontmatter.title}</h4>
+              <div key={post.node.id} className="card-panel white-background">
+                <h3 className="latest-post-item">
+                  {post.node.frontmatter.title}
+                </h3>
+                
                 <small>
-                  Posted by {post.node.frontmatter.author} -{" "}
+                  Posted by {post.node.frontmatter.author} -
                   {post.node.frontmatter.date}
                 </small>
 
-                <p style={excerptStyle}>{post.node.excerpt}</p>
+                <p className="excerpt">{post.node.excerpt}</p>
                 <Link to={post.node.frontmatter.path}>
-                  <button class="primary" style={buttonStyle}>
+                  <button class="btn main-brand-color-background center-align hoverable">
                     Read More
                   </button>
                 </Link>
-
-                <br />
-                <br />
-                <hr />
               </div>
             )
         })}

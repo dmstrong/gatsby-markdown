@@ -5,5 +5,7 @@ title: "Day 2 - CSS Hell"
 author: "D. Strong"
 ---
 
-## Day 2
+
+This is my second blog post in Gatbsy.
+This is my second blog post in Gatbsy.
 This is my second blog post in Gatbsy.
